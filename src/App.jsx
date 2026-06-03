@@ -1,4 +1,5 @@
 import React from "react";
+import { generatePDF } from "./components/PDFgenerator";
 
 // ----------------------
 // CLASS MERGER
@@ -235,6 +236,7 @@ const portfolio = {
 // APP
 // ----------------------
 export default function App() {
+
   const renderSection = (section) => {
     const { type, data } = section;
 
@@ -490,13 +492,14 @@ export default function App() {
               {data.title}
             </h2>
 
-            <a
-              href={data.file}
-              download
-              className={theme.hero.button}
-            >
-              Download Resume
-            </a>
+            <div className="text-center my-10">
+              <button
+                onClick={()=> generatePDF(portfolio)}
+                className="px-6 py-3 bg-indigo-600 rounded-xl"
+              >
+                Download PDF
+              </button>
+            </div>
           </section>
         );  
       case "contact":
@@ -532,17 +535,13 @@ export default function App() {
         default:
         return null;
     }
-  };
-
+  }
   return (
     <div className={theme.layout.page}>
       <div className={theme.layout.container}>
         {portfolio.sections.map((s, i) => (
           <div key={i}>{renderSection(s)}</div>
         ))}
-        <footer className="text-center py-10 text-gray-500 border-t border-white/10">
-          © 2026 {portfolio.meta.title}
-        </footer>
       </div>
     </div>
   );
