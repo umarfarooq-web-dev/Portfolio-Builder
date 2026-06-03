@@ -1,1 +1,0 @@
-import{n as e,r as t}from"./index-Noxajq02.js";t();var n=e();function r({data:e,theme:t}){return(0,n.jsxs)(`section`,{className:`py-20`,children:[(0,n.jsx)(`h2`,{className:t.sectionTitle,children:e.title}),(0,n.jsx)(`div`,{className:`grid md:grid-cols-2 gap-4`,children:e.items.map((e,r)=>(0,n.jsx)(`div`,{className:t.card.base,children:e},r))})]})}export{r as default};
