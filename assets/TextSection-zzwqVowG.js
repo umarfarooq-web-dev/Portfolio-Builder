@@ -1,0 +1,1 @@
+import"./rolldown-runtime-QTnfLwEv.js";import{a as e,r as t}from"./vendor-S4LMTaSx.js";e();var n=t();function r({data:e,theme:t}){return(0,n.jsxs)(`section`,{className:`py-20 text-center`,children:[(0,n.jsx)(`h2`,{className:t.sectionTitle,children:e.title}),(0,n.jsx)(`p`,{className:`text-gray-400 max-w-3xl mx-auto`,children:e.content})]})}export{r as default};
